@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Univers";
+  src: url("folder/Univers-Bold.woff2") format("woff2"),
+    url("folder/Univers-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("folder/Univers.woff2") format("woff2"),
+    url("folder/Univers.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.work-sans-body {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --ff-header: "Univers", sans-serif;
+  --ff-body: "Work Sans", sans-serif;
+}
+
+.brand {
+  margin-top: 15px;
+  font-size: 32px;
+  color: #000000;
+  font-family: var(--ff-header);
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  text-align: end;
+  color: #267bae;
+}
+
+.chedule {
+  color: #000000;
+  font-family: var(--ff-header);
+  font-size: 32px;
+}
+
+.card {
+  margin-top: 50px;
+  height: 646px;
+  width: 486px;
+  background-color: #d9d9d9;
+  border: none;
+}
+
+.signUp {
+  margin-top: 40px;
+  font-size: 40px;
+  font-family: var(--ff-header);
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.signupDesc {
+  margin-left: 1px;
+  font-weight: 400;
+  font-family: var(--ff-body);
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: gray;
+}
+
+.customInput {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.customInput input {
+  padding: 1rem 0.75rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.customInput label {
+  position: absolute;
+  top: -0.6rem;
+  left: 0.75rem;
+  background-color: #fff;
+  padding: 0 0.25rem;
+  font-size: 14px;
+  font-family: var(--ff-body);
+  color: #666;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.customInput input:focus + label,
+.customInput input:not(:placeholder-shown) + label {
+  color: #00050c;
+  font-weight: 400;
+}
+
+.inputName {
+  display: flex;
+  gap: 10px;
+  font-family: var(--ff-body);
+  margin-bottom: 10px;
+}
+
+.inputTeacher {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.inputPass {
+  margin-bottom: 10px;
+}
+
+.formCheck {
+  margin-top: 20px;
+  font-family: var(--ff-body);
+}
+
+.termsLink {
+  text-decoration: none;
+  color: #ff8682;
+}
+
+.privacyLink {
+  text-decoration: none;
+  color: #ff8682;
+}
+
+.btncreateAccount {
+  margin-top: 30px;
+  width: 640px;
+  height: 48px;
+  background-color: #267bae;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.alreadyHave {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  font-family: var(--ff-body);
+}
+
+.loginLink {
+  color: #ff8682;
+  text-decoration: none;
+}
