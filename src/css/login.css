@@ -1,0 +1,71 @@
+.brand {
+    margin-top: 8px;
+    font-family: var(--ff-header);
+    font-weight: bold;
+    font-size: 30px;
+    color: #267BAE;
+}
+.chedule {
+    color: #000000;
+}
+
+
+.logIn {
+    margin-top: 100px;
+}
+
+.loginDesc {
+ margin-left: 1px;
+ font-weight: 400;
+}
+
+
+a .signUp {
+    color: #FF8682;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+a .signUp {
+    text-decoration: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.inputForm,.loginBtn {
+     width: 500px;
+}
+
+.custom-input {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.custom-input input {
+    width: 500px ;
+    padding: 1rem 0.75rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.custom-input label {
+    position: absolute;
+    top: -0.6rem;
+    left: 0.75rem;
+    background-color: #fff;
+    padding: 0 0.25rem;
+    font-size: 0.85rem;
+    color: #666;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.custom-input input:focus + label,
+.custom-input input:not(:placeholder-shown) + label {
+    color: #00050c;
+    font-weight: 400;
+}
