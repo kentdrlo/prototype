@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Univers";
+  src: url("folder/Univers-Bold.woff2") format("woff2"),
+    url("folder/Univers-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("folder/Univers.woff2") format("woff2"),
+    url("folder/Univers.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.work-sans-body {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+    --ff-header: "Univers", sans-serif;
+    --ff-body: "Work Sans", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #F8FAFC;
+}
+
+.sidebar {
+  background-color: #f8fafc;
+  height: 100vh;
+  width: 100%;
+  border-right: solid 2px #EDF1F5;
+}
+
+.header-sidebar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 16px;
+}
+
+span:not(.default){
+    color: #267BAE;
+}
+
+.brand{
+    margin-top: 8px;
+    font-family: var(--ff-header);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav{
+    gap: 16px;
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--ff-body);
+    color: #021623;
+}
