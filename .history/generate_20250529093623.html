@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Timetable</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #ecf3fa;
+      }
+
+      .navbar {
+        height: 68px;
+        background-color: white;
+        justify-content: center;
+        display: flex;
+      }
+
+      .navbarSection button {
+        margin-top: 0px;
+        width: 168px;
+        height: 48px;
+      }
+
+      .scheduleName,
+      .timeSettings,
+      .daysConfiguration {
+        width: auto;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      input.schoolInput {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 50px;
+      }
+
+      .wrap {
+        padding: 10px;
+      }
+
+      .days {
+        padding: 10px;
+      }
+
+      .selectDays {
+        color: #565d64;
+        font-size: 16px;
+      }
+
+      .weekdays {
+        padding-top: 10px;
+      }
+
+      .weekdays button {
+        height: 90px;
+        width: 170px;
+      }
+
+      .schoolDays {
+        padding: 10px;
+        margin-top: 20px;
+      }
+
+      .daysCard {
+        padding: 20px;
+        justify-content: center;
+        width: 100%;
+        height: 170px;
+        background-color: #ebf5ff;
+      }
+
+      .daysButton button {
+        width: 140px;
+        height: 56px;
+      }
+
+      .dayOff {
+        padding: 20px;
+        justify-content: center;
+        width: 100%;
+        height: 170px;
+        background-color: #eff1f3;
+      }
+
+      .dayOffButton button {
+        width: 140px;
+        height: 56px;
+      }
+
+      .teachersInput {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .subjectSection {
+        padding: 10px;
+      }
+
+      .subjects {
+        margin-right: 5px;
+      }
+
+      label.form-label {
+        font-size: 14px;
+      }
+
+      .classesInput {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .classesSection {
+        padding: 10px;
+      }
+
+      .classes {
+        margin-right: 5px;
+      }
+
+      .btn-selected {
+        background-color: #8ac6fa !important;
+        border-color: #8ac6fa !important;
+        color: white !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbarSection">
+        <button type="button" class="btn btn-secondary">General Setting</button>
+        <button type="button" class="btn btn-secondary">Classes</button>
+        <button type="button" class="btn btn-secondary">Lessons</button>
+        <button type="button" class="btn btn-secondary">
+          Review & Generate
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- School Name and Time Settings -->
+      <div class="row">
+        <div class="col">
+          <div class="wrap">
+            <img
+              src="src/assets/icons/teacher.svg"
+              class="scheduleName"
+            />Schedule Name
+            <form method="POST">
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control schoolInput"
+                  id="schedule-name"
+                  placeholder="Enter Schedule name"
+                />
+              </div>
+              <img
+                src="src/assets/icons/teacher.svg"
+                class="timeSettings"
+              />Time Settings
+              <div class="col-sm-10">
+                <p class="selectDays">Periods Per Day</p>
+                <input
+                  type="text"
+                  class="form-control schoolInput"
+                  id="time-settings"
+                  placeholder="0"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Days Configuration Header -->
+      <div class="row">
+        <div class="col">
+          <div class="days">
+            <img
+              src="src/assets/icons/teacher.svg"
+              class="daysConfiguration"
+            />Days Configuration
+            <p class="selectDays">
+              Select which days are school days. The remaining days will be
+              considered days off.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekdays Buttons -->
+      <div class="row">
+        <div class="col">
+          <div class="weekdays d-flex flex-row flex-wrap gap-2" id="weekdays">
+            <button
+              type="button"
+              class="btn btn-secondary day-btn"
+              data-day="Monday"
+            >
+              Monday
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary day-btn"
+              data-day="Tuesday"
+            >
+              Tuesday
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary day-btn"
+              data-day="Wednesday"
+            >
+              Wednesday
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary day-btn"
+              data-day="Thursday"
+            >
+              Thursday
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary day-btn"
+              data-day="Friday"
+            >
+              Friday
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary day-btn"
+              data-day="Saturday"
+            >
+              Saturday
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary day-btn"
+              data-day="Sunday"
+            >
+              Sunday
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- School Days and Days Off Cards -->
+      <div class="schoolDays mt-4">
+        <div class="row">
+          <div class="col-md-6">
+            <p>School Days</p>
+            <div class="daysCard align-items-center">
+              <div
+                class="daysButton d-flex flex-row flex-wrap gap-2"
+                id="schoolDaysContainer"
+              ></div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <p>Days Off</p>
+            <div class="dayOff align-items-center">
+              <div
+                class="dayOffButton d-flex flex-row flex-wrap gap-2"
+                id="dayOffContainer"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subjects Section -->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="subjectSection">
+              <div class="days">
+                <img src="src/assets/icons/teacher.svg" class="subjects" />
+                Subjects
+                <p class="selectDays">
+                  Add all the subjects or courses you want to schedule. You can
+                  also manage time-off for them.
+                </p>
+              </div>
+
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <label for="teacher-input" class="form-label fw-semibold"
+                    >Choose the teacher for the preferred subject</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control teachersInput"
+                    id="teacher-input"
+                    placeholder="Enter teacher name"
+                  />
+                </div>
+
+                <div class="col-md-3 text-center">
+                  <label class="form-label fw-semibold">Availability</label
+                  ><br />
+                  <button type="button" class="btn btn-secondary" disabled>
+                    Availability
+                  </button>
+                </div>
+
+                <div class="col-md-3 text-center">
+                  <label class="form-label fw-semibold">Actions</label><br />
+                  <button type="button" class="btn btn-secondary" disabled>
+                    Actions
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classes Section -->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="classesSection">
+              <div class="days">
+                <img src="src/assets/icons/teacher.svg" class="classes" />
+                Classes
+                <p class="selectDays">
+                  Add classes or groups or grades and assign class teachers. You
+                  can also set time off for them.
+                </p>
+              </div>
+
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <label for="class-input" class="form-label fw-semibold"
+                    >Enter the class or year level</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control classesInput"
+                    id="class-input"
+                    placeholder="e.g. Grade 7 - Emerald"
+                  />
+                </div>
+
+                <div class="col-md-3 text-center">
+                  <label class="form-label fw-semibold">Availability</label
+                  ><br />
+                  <button type="button" class="btn btn-secondary" disabled>
+                    Availability
+                  </button>
+                </div>
+
+                <div class="col-md-3 text-center">
+                  <label class="form-label fw-semibold">Actions</label><br />
+                  <button type="button" class="btn btn-secondary" disabled>
+                    Actions
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      const allDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+      const selectedDays = new Set();
+
+      const dayButtons = document.querySelectorAll('.day-btn');
+      const schoolDaysContainer = document.getElementById('schoolDaysContainer');
+      const dayOffContainer = document.getElementById('dayOffContainer');
+
+      dayButtons.forEach(button => {
+          button.addEventListener('click', () => {
+              const day = button.dataset.day;
+              button.classList.toggle('btn-selected');
+
+              if (selectedDays.has(day)) {
+                  selectedDays.delete(day);
+              } else {
+                  selectedDays.add(day);
+              }
+
+              updateDayCards();
+          });
+      });
+
+      function updateDayCards() {
+          schoolDaysContainer.innerHTML = '';
+          dayOffContainer.innerHTML = '';
+
+          allDays.forEach(day => {
+              const btn = document.createElement('button');
+              btn.className = 'btn btn-secondary';
+              btn.style.width = '140px';
+              btn.style.height = '56px';
+              btn.innerText = day;
+
+              if (selectedDays.has(day)) {
+                  schoolDaysContainer.appendChild(btn);
+              } else {
+                  dayOffContainer.appendChild(btn);
+              }
+          });
+      }
+
+      // Initial selection: Monday to Friday
+      ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].forEach(day => {
+          selectedDays.add(day);
+          const btn = document.querySelector(.day-btn[data-day="${day}"]);
+          if (btn) {
+              btn.classList.add('btn-selected');
+          }
+      });
+
+      updateDayCards();
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

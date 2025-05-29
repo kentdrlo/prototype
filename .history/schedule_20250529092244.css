@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Univers";
+  src: url("folder/Univers-Bold.woff2") format("woff2"),
+    url("folder/Univers-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("folder/Univers.woff2") format("woff2"),
+    url("folder/Univers.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.work-sans-body {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --ff-header: "Univers", sans-serif;
+  --ff-body: "Work Sans", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #f8fafc;
+}
+
+.top-settings {
+  margin-bottom: 40px;
+}
+
+.top-settings-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.schedule-name {
+  font-family: var(--ff-header);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 16px;
+  background-color: #eff1f3;
+}
+
+.day-box,
+.table-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 8px;
+}
+
+.day-box {
+  height: 40px;
+}
+
+.card-day {
+  height: 100%;
+  font-family: var(--ff-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8ac6fa7c;
+  color: #4c6476;
+  font-family: var(--ff-header);
+  font-weight: bold;
+  font-size: 16px;
+  padding: 4px 8px 4px 8px;
+  border-radius: 8px;
+  border: 1px solid #8ac6fa;
+}
+
+.table-box {
+  grid-auto-rows: auto;
+  row-gap: 8px;
+}
+
+.card {
+  width: auto;
+  height: auto;
+  font-family: var(--ff-body);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 4px 8px 4px 8px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+}
+
+.subject-detail-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.subject-teacher-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subject-name,
+.time {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.teacher-name {
+  font-family: var(--ff-body);
+  font-size: 12px;
+}

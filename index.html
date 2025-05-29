@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Color Box with Picker</title>
+  <style>
+    #colorBox {
+      padding: 20px;
+      font-size: 20px;
+      font-family: sans-serif;
+      min-height: 60px;
+      width: 100%;
+      max-width: 500px;
+      border: 2px solid #aaa;
+      border-radius: 10px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    #inputField {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      font-size: 18px;
+      box-sizing: border-box;
+    }
+
+    #pickerLabel {
+      font-family: sans-serif;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    #controls {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<input type="text" id="inputField" placeholder="Type something here..." />
+<div id="colorBox">Your text will appear here...</div>
+
+<div id="controls">
+  <label id="pickerLabel" for="manualColor">Pick a background color:</label>
+  <input type="color" id="manualColor" />
+</div>
+
+<script>
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  const inputField = document.getElementById('inputField');
+  const colorBox = document.getElementById('colorBox');
+  const manualColor = document.getElementById('manualColor');
+
+  let isManual = false;
+
+  inputField.addEventListener('input', () => {
+    const color = getRandomColor();
+    if (!isManual) {
+      colorBox.style.backgroundColor = color;
+      colorBox.style.color = color;
+    }
+    colorBox.textContent = inputField.value;
+  });
+
+  manualColor.addEventListener('input', () => {
+    const selectedColor = manualColor.value;
+    colorBox.style.backgroundColor = selectedColor;
+    colorBox.style.color = selectedColor;
+    isManual = true;
+  });
+</script>
+
+</body>
+</html>
+    
