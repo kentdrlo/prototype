@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="schedule.css" />
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="top-settings">
+        <div class="top-settings-wrapper">
+          <div class="schedule-name">Grade-7 Aquarius</div>
+          <button type="button" class="btn btn-secondary">Edit</button>
+        </div>
+      </div>
+    </div>
+    <div class="table-container row">
+      <div class="grid-wrapper">
+        <div class="day-box" id="dayBox"></div>
+        <div class="table-box" id="topBox">
+          <div
+            class="card"
+            style="
+              border-left: 8px solid #` + detail.color + `;
+              color: #` + detail.color + `;
+            "
+          >
+            <div class="subject-teacher-wrapper">
+              <div class="subject-detail-wrapper">
+                <div class="subject-name">` + detail.subject + `</div>
+                <div class="subject-code">` + detail.code + `</div>
+                <div class="edit"><img src="" >Edit</div>
+              </div>
+              <div class="teacher-name">` + detail.name + `</div>
+            </div>
+            <div class="time">` + detail.time + `</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="schedule.js"></script>
