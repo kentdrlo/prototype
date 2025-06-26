@@ -35,7 +35,7 @@
   font-family: var(--ff-header);
   font-weight: bold;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   text-align: end;
   color: #267bae;
 }
@@ -55,7 +55,7 @@
 }
 
 .signUp {
-  margin-top: 40px;
+  margin-top: -10px;
   font-size: 40px;
   font-family: var(--ff-header);
   font-weight: bold;

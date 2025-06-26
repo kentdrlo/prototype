@@ -1,0 +1,186 @@
+body {
+  background-color: #ecf3fa;
+}
+
+.profileContainer {
+  height: 30vh;
+  border-style: none;
+  background-color: rgb(247, 247, 247);
+}
+
+.profileImage {
+  display: flex;
+  justify-content: end;
+  padding-top: 30px;
+}
+
+.profileInfo {
+  padding-top: 40px;
+}
+
+.subjects {
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  justify-content: start;
+}
+
+.firstSub {
+  margin-right: 5px;
+  border-radius: 10px;
+  background-color: aqua;
+  width: 80px;
+  text-align: center;
+}
+
+.secondSub {
+  margin-right: 5px;
+  border-radius: 10px;
+  background-color: rgb(156, 158, 248);
+  width: 80px;
+  text-align: center;
+}
+
+.thirdSub {
+  margin-right: 5px;
+  border-radius: 10px;
+  background-color: rgb(246, 161, 123);
+  width: 80px;
+  text-align: center;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.teacherCode {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.profileButtons {
+  text-align: end;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  width: 90px;
+  margin-top: 10px;
+}
+
+.editContainer {
+  display: flex;
+  align-items: center;
+}
+
+.subject {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 450;
+  margin-top: 10px;
+}
+
+.editBtn {
+  margin-top: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 30px;
+}
+
+.subjectContainer {
+    background-color: #ecf3fa;
+  border-style: none;
+}
+
+.subjectContent {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.subjectOne {
+  text-align: center;
+  border-style: none;
+  background-color: rgb(238, 238, 238);
+  border-left: solid 8px #3a59d1;
+  margin: 10px;
+  width: 300px;
+}
+
+.subjectTwo {
+  text-align: center;
+  border-style: none;
+  background-color: rgb(238, 238, 238);
+  border-left: solid 8px #e97751;
+  margin: 10px;
+  width: 300px;
+}
+
+.subjectThree {
+  text-align: center;
+  border-style: none;
+  background-color: rgb(238, 238, 238);
+  border-left: solid 8px #e8b342;
+  margin: 10px;
+  width: 300px;
+}
+
+.subjectFour {
+  text-align: center;
+  border-style: none;
+  background-color: rgb(238, 238, 238);
+  border-left: solid 8px #71e842;
+  margin: 10px;
+  width: 300px;
+}
+
+.subjectFive {
+  text-align: center;
+  border-style: none;
+  background-color: rgb(238, 238, 238);
+  border-left: solid 8px #d742e8;
+  margin: 10px;
+  width: 300px;
+}
+
+.subjectSix {
+  text-align: center;
+  border-style: none;
+  background-color: rgb(238, 238, 238);
+  border-left: solid 8px #42e8bc;
+  margin: 10px;
+  width: 300px;
+}
+
+.subjectName1,
+.subjectCode1 {
+  color: #3a59d1;
+}
+
+.subjectName2,
+.subjectCode2 {
+  color: #e97751;
+}
+
+.subjectName3,
+.subjectCode3 {
+  color: #e8b342;
+}
+
+.subjectName4,
+.subjectCode4 {
+  color: #71e842;
+}
+
+.subjectName5,
+.subjectCode5 {
+  color: #d742e8;
+}
+
+.subjectName6,
+.subjectCode6 {
+  color: #42e8bc;
+}
